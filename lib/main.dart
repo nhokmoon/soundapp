@@ -9,9 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   final AudioCache audioCache = AudioCache();
-  List<double> left = [20, 40, 60, 80, 100, 120, 140];
-  List<double> right = [20, 40, 60, 80, 100, 120, 140];
-  List<String> name = ['DO', 'RE', 'MI', 'FA', 'SOL', 'LA', 'SI'];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,21 +21,139 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              for (int i = 0; i < 7; i++)
-                Expanded(
-                    child: ConstrainedBox(
-                  constraints: BoxConstraints.expand(),
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(left[i], 0, right[i], 10),
-                    child: ElevatedButton(
-                      onPressed: btnTap(0),
-                      child: Text(name[i]),
-                      style: TextButton.styleFrom(
-                          minimumSize: Size(800, 400),
-                          backgroundColor: Colors.red),
-                    ),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(20, 0, 20, 10),
+                  child: ElevatedButton(
+                    child: Text('DO',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.red),
                   ),
-                )),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(40, 0, 40, 10),
+                  child: ElevatedButton(
+                    child: Text('RE',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.yellow),
+                  ),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(60, 0, 60, 10),
+                  child: ElevatedButton(
+                    child: Text('MI',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.green),
+                  ),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(80, 0, 80, 10),
+                  child: ElevatedButton(
+                    child: Text('FA',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.pink),
+                  ),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(100, 0, 100, 10),
+                  child: ElevatedButton(
+                    child: Text('SOL',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.purple),
+                  ),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(120, 0, 120, 10),
+                  child: ElevatedButton(
+                    child: Text('LA',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.orange),
+                  ),
+                ),
+              )),
+              Expanded(
+                  child: ConstrainedBox(
+                constraints: BoxConstraints.expand(),
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(140, 0, 140, 10),
+                  child: ElevatedButton(
+                    child: Text('SI',
+                        style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.black,
+                          fontStyle: FontStyle.italic,
+                        )),
+                    onPressed: btn1,
+                    style: TextButton.styleFrom(
+                        minimumSize: Size(800, 400),
+                        backgroundColor: Colors.blue),
+                  ),
+                ),
+              )),
             ],
           ),
         ),
@@ -46,7 +161,31 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  void btnTap(int i) {
-    audioCache.play('audios/note' + name[i] + '.wav');
+  void btn1() {
+    audioCache.play('audios/noteDO.wav');
+  }
+
+  void btn2() {
+    audioCache.play('audios/noteRE.wav');
+  }
+
+  void btn3() {
+    audioCache.play('audios/noteMI.wav');
+  }
+
+  void btn4() {
+    audioCache.play('audios/noteFA.wav');
+  }
+
+  void btn5() {
+    audioCache.play('audios/noteSOL.wav');
+  }
+
+  void btn6() {
+    audioCache.play('audios/noteLA.wav');
+  }
+
+  void btn7() {
+    audioCache.play('audios/noteSI.wav');
   }
 }
