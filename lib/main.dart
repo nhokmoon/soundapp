@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn2,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.yellow),
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn3,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.green),
@@ -90,7 +90,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn4,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.pink),
@@ -109,7 +109,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn5,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.purple),
@@ -128,7 +128,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn6,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.orange),
@@ -147,7 +147,7 @@ class MyApp extends StatelessWidget {
                           color: Colors.black,
                           fontStyle: FontStyle.italic,
                         )),
-                    onPressed: btn1,
+                    onPressed: btn7,
                     style: TextButton.styleFrom(
                         minimumSize: Size(800, 400),
                         backgroundColor: Colors.blue),
